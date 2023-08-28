@@ -1,3 +1,4 @@
+console.log("Ejercicio 01 - funcion suma");
 /*
  * a y b son los parámetros de entrada.
  * La función debe devolver la suma de los parámetros de entrada
@@ -8,6 +9,8 @@ const suma = (a, b) => {
 };
 console.log(suma(27, 47)); //74
 
+console.log("***");
+console.log("Ejercicio 02 - son iguales");
 // Devuelve "true" si "x" e "y" son iguales
 // De lo contrario, devuelve "false"
 // Debes generar el código para que la función haga lo solicitado.
@@ -17,12 +20,16 @@ const sonIguales = (x, y) => {
 console.log(sonIguales(3, 2)); //false
 console.log(sonIguales(5, 5)); //true
 
+console.log("***");
+console.log("Ejercicio 03 - longitud de string");
 // Devuelve "true" si las dos strings tienen la misma longitud
 // De lo contrario, devuelve "false"
 const tienenMismaLongitud = (str1, str2) => str1.length === str2.length;
 console.log(tienenMismaLongitud("Cinco", "Siete")); //true
 console.log(tienenMismaLongitud("Mauricio", "Milton")); //false
 
+console.log("***");
+console.log("Ejercicio 04 - es positivo");
 /**
  * la función recibe como parámetro de entrada un número entero.
  * Devuelve como resultado una cadena de texto que indica si el
@@ -43,6 +50,8 @@ const esPositivo = (numero) => {
 console.log(esPositivo(15));
 console.log(esPositivo(-19));
 
+console.log("***");
+console.log("Ejercicio 05 - colors");
 //La función recibe un color. Devolver el string correspondiente:
 //En caso que el color recibido sea "blue", devuelve --> "This is blue"
 //En caso que el color recibido sea "red", devuelve --> "This is red"
@@ -70,6 +79,8 @@ console.log(colors("green")); // Resultado: "This is green"
 console.log(colors("orange")); // Resultado: "This is orange"
 console.log(colors("yellow")); // Resultado: "Color not found"
 
+console.log("***");
+console.log("Ejercicio 06 - fizzbuzz");
 // Si "numero" es divisible entre 3, devuelve "fizz"
 // Si "numero" es divisible entre 5, devuelve "buzz"
 // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
@@ -90,6 +101,8 @@ console.log(fizzBuzz(5)); // Resultado: "buzz"
 console.log(fizzBuzz(15)); // Resultado: "fizzbuzz"
 console.log(fizzBuzz(7)); // Resultado: 7
 
+console.log("***");
+console.log("Ejercicio 07 - primer elemento");
 /**
  * La función recibe como parámetro de entrada un arreglo.
  * La función debe regresar el primer elemento del arreglo
@@ -101,19 +114,27 @@ const devolverPrimerElemento = (array) => {
   return array[0];
 };
 console.log(devolverPrimerElemento(array));
+console.log(`El primer elemento es: ${devolverPrimerElemento(array)}`);
 
+console.log("***");
+console.log("Ejercicio 08 - agregar al final");
 /**
  * La función recibe dos parámetros de entrada, un arreglo y un elemento
  * Se debe añadir el elemento al final del arreglo y luego regresar el arreglo
  */
+console.log(`Array original: ${array}`);
+
 const agregarItemAlFinalDelArray = (array, elemento) => {
   array.push(elemento);
   return array;
 };
 let nuevoElemento = 24725;
 let arrayConNuevoElemento = agregarItemAlFinalDelArray(array, nuevoElemento);
+
 console.log(`Array con nuevo elemento: ${arrayConNuevoElemento}`);
 
+console.log("***");
+console.log("Ejercicio 09 - nuevo usuario");
 /**
  * Crea un nuevo objeto con las propiedades coincidiendo con los argumentos
  * que se pasan a la función.  Devuelve el objeto
@@ -134,6 +155,8 @@ const usuario1 = nuevoUsuario(
 );
 console.log(usuario1);
 
+console.log("***");
+console.log("Ejercicio 10 - comprueba password");
 // Comprueba si el "password" enviado coincide con la propiedad "password" del objeto "usuario"
 // Devuelve "true" si coinciden
 // De lo contrario, devuelve "false"
@@ -143,6 +166,8 @@ const verificarPassword = (usuario, password) => {
 console.log(verificarPassword(usuario1, "contraseña123")); // Devuelve true
 console.log(verificarPassword(usuario1, "contraseña456")); // Devuelve false
 
+console.log("***");
+console.log("Ejercicio 11 - reemplaza password");
 // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
 // Devuelve el objeto
 const actualizarPassword = (usuario, nuevaPassword) => {
@@ -154,6 +179,8 @@ console.log(usuario1); // Antes de la actualización
 actualizarPassword(usuario1, "nuevaContraseña456");
 console.log(usuario1); // Después de la actualización
 
+console.log("***");
+console.log("Ejercicio 12 - agregar amigo");
 // "usuario" tiene una propiedad llamada "amigos" que es un array
 // Agrega "nuevoAmigo" al final de ese array
 // Devuelve el objeto "usuario"
@@ -172,6 +199,8 @@ console.log(usuario2); //Antes de agregar un nuevo amigo.
 agregarAmigo(usuario2, "Sebastián");
 console.log(usuario2); //Después de agregar un nuevo amigo.
 
+console.log("***");
+console.log("Ejercicio 13 - es premium");
 // "usuarios" es un array de objetos "usuario"
 // Cada objeto "usuario" tiene la propiedad "esPremium"
 // Define cada propiedad "esPremium" de cada objeto como "true"
@@ -193,6 +222,8 @@ console.log(listaUsuarios); // Antes de actualizar a Premium
 pasarUsuarioAPremium(listaUsuarios);
 console.log(listaUsuarios); // Después de actualizar a Premium
 
+console.log("***");
+console.log("Ejercicio 14 - sumar likes");
 // "usuario" tiene una propiedad llamada "posts" que es un array
 // "posts" es un array de objetos "post"
 // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
@@ -216,6 +247,8 @@ const usuario3 = {
 const totalLikes = sumarLikesDeUsuario(usuario3);
 console.log(`El total de likes es: ${totalLikes}`);
 
+console.log("***");
+console.log("Ejercicio 15 - clase persona");
 //Crea el constructor de la clase "Persona"
 //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
 //Debe tener un método llamado "detalle" que nos devuelve un objeto con
@@ -242,6 +275,8 @@ const persona1 = new Persona("Milton", "Ochoa Vélez", 41, "Calle falsa 123");
 const detallesPersona1 = persona1.detalle();
 console.log(detallesPersona1);
 
+console.log("***");
+console.log("Ejercicio 16 - instancia persona");
 //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
 //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
 //Devolver la nueva persona creada.
@@ -253,6 +288,8 @@ const nuevaPersona = crearInstanciaPersona("Juan", "Perez", 22, "Saavedra 123");
 const detallesNuevaPersona = nuevaPersona.detalle();
 console.log(detallesNuevaPersona);
 
+console.log("***");
+console.log("Ejercicio 17 - sumar enteros de array");
 // Suma todos los números enteros (int/integers) de un array ("numeros")
 // Pasa el resultado a `cb`
 // No es necesario devolver nada
@@ -267,6 +304,8 @@ const callback = (resultado) => {
 };
 sumarArray(numeros, callback);
 
+console.log("***");
+console.log("Ejercicio 18 - iterar array");
 // Itera sobre la matriz "array" y pasa los valores a cb uno por uno
 // Pista: Estarás invocando a `cb` varias veces (una por cada valor en el array)
 // no tienes que devolver nada
@@ -284,6 +323,8 @@ const imprimirDoble = (num) => {
 };
 copiarEach(miArray, imprimirDoble);
 
+console.log("***");
+console.log("Ejercicio 19 - operación matemática");
 //Vamos a recibir una función (cb) que realiza una operación matemática junto con dos números.
 //Devolver la función pasándole como argumentos los números recibidos.
 const operacionMatematica = (n1, n2, cb) => {
@@ -299,13 +340,46 @@ console.log(resultadoSuma); // Salida: 8
 const resultadoResta = operacionMatematica(10, 4, resta);
 console.log(resultadoResta); // Salida: 6
 
+console.log("***");
+console.log("Ejercicio 20 - palabras que inician con la 'a'.");
 //Filtrar todos los elementos del array que comiencen con la letra "a".
 //Devolver un nuevo array con los elementos que cumplen la condición.
 function filter(array) {
   const filtraArray = array.filter((element) => element.startsWith("a"));
   return filtraArray;
 }
-const palabras = ["manzana", "banana", "uva", "pera", "albaricoque"];
+const palabras = [
+  "manzana",
+  "banana",
+  "uva",
+  "pera",
+  "albaricoque",
+  "aceituna",
+  "almendra",
+];
 
 const palabrasConA = filter(palabras);
-console.log(`La que inicia con a: ${palabrasConA}`);
+console.log(`La que inicia con a: ${palabrasConA}.`);
+
+module.exports = {
+  suma,
+  sonIguales,
+  tienenMismaLongitud,
+  esPositivo,
+  colors,
+  fizzBuzz,
+  devolverPrimerElemento,
+  agregarItemAlFinalDelArray,
+  nuevoUsuario,
+  verificarPassword,
+  actualizarPassword,
+  agregarAmigo,
+  pasarUsuarioAPremium,
+  sumarLikesDeUsuario,
+  Persona,
+  crearInstanciaPersona,
+  sumarArray,
+  copiarEach,
+  operacionMatematica,
+  filter,
+};
