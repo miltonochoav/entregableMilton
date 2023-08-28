@@ -6,7 +6,7 @@
 const suma = (a, b) => {
   return a + b;
 };
-console.log(suma(21, 47));
+console.log(suma(27, 47)); //74
 
 // Devuelve "true" si "x" e "y" son iguales
 // De lo contrario, devuelve "false"
@@ -265,5 +265,47 @@ const numeros = [1, 2, 3, 4, 5, 6];
 const callback = (resultado) => {
   console.log(`La suma es: ${resultado}`);
 };
-
 sumarArray(numeros, callback);
+
+// Itera sobre la matriz "array" y pasa los valores a cb uno por uno
+// Pista: Estarás invocando a `cb` varias veces (una por cada valor en el array)
+// no tienes que devolver nada
+
+const copiarEach = (array, cb) => {
+  for (let i = 0; i < array.length; i++) {
+    // Invoca la función de devolución de llamada `cb` con el elemento actual
+    cb(array[i]);
+  }
+};
+
+const miArray = [1, 2, 3, 4, 5];
+const imprimirDoble = (num) => {
+  console.log(num * 2);
+};
+copiarEach(miArray, imprimirDoble);
+
+//Vamos a recibir una función (cb) que realiza una operación matemática junto con dos números.
+//Devolver la función pasándole como argumentos los números recibidos.
+const operacionMatematica = (n1, n2, cb) => {
+  return cb(n1, n2);
+};
+
+const suma2 = (a, b) => a + b;
+const resta = (a, b) => a - b;
+
+const resultadoSuma = operacionMatematica(5, 3, suma2);
+console.log(resultadoSuma); // Salida: 8
+
+const resultadoResta = operacionMatematica(10, 4, resta);
+console.log(resultadoResta); // Salida: 6
+
+//Filtrar todos los elementos del array que comiencen con la letra "a".
+//Devolver un nuevo array con los elementos que cumplen la condición.
+function filter(array) {
+  const filtraArray = array.filter((element) => element.startsWith("a"));
+  return filtraArray;
+}
+const palabras = ["manzana", "banana", "uva", "pera", "albaricoque"];
+
+const palabrasConA = filter(palabras);
+console.log(`La que inicia con a: ${palabrasConA}`);
